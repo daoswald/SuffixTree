@@ -1,0 +1,6 @@
+Revision history for Perl extension SuffixTree
+
+0.01 Sat Jan  4 15:38:30 IST 2003
+	- Took files from http://cs.haifa.ac.il/~shlomo/suffix_tree/
+	- Made a Perl wrapper for the header file using SWIG
+	- The original version

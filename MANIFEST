@@ -1,0 +1,9 @@
+Changes
+INSTALL
+Makefile.PL
+MANIFEST
+README
+suffix_tree.c
+suffix_tree.h
+SuffixTree.pm
+suffix_tree_wrap.c
