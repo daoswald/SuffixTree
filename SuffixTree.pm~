@@ -2,7 +2,7 @@ package SuffixTree;
 require Exporter;
 require DynaLoader;
 use vars qw/$VERSION @ISA @EXPORT_OK/;
-$VERSION = '0.02';
+$VERSION = '0.01';
 @ISA = qw(Exporter DynaLoader);
 package SuffixTree;
 bootstrap SuffixTree;

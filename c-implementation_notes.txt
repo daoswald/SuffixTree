@@ -477,9 +477,10 @@ of characters, considering a certain coeficent on the number of characters.
 
 7. License
 ----------
-Copyright 2002-2003 Shlomo Yona. All rights reserved.
-This library is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+Copyright (c) 2002, 2003 Shlomo Yona. All rights reserved.
+
+This library is free software. 
+You can redistribute it and/or modify it under the same terms as Perl itself.  
 
 8. Bug reports
 --------------

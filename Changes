@@ -1,5 +1,11 @@
 Revision history for Perl extension SuffixTree
 
+0.02 Mon Jan  6 07:55:54 IST 2003
+	- Added t/use.pl test that only tests if the module 
+		loads correctly in 'use SuffixTree'
+	- Renamed README to c-implementation_notes.txt
+	- Minor documentation changes
+	- Updated MANIFEST
 0.01 Sat Jan  4 15:38:30 IST 2003
 	- Took files from http://cs.haifa.ac.il/~shlomo/suffix_tree/
 	- Made a Perl wrapper for the header file using SWIG

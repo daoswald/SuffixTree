@@ -9,12 +9,11 @@ Current maintainer: Shlomo Yona	<shlomo@cs.haifa.ac.il>
 
 COPYRIGHT
 
-Copyright 2002-2003 Shlomo Yona
+Copyright (c) 2002, 2003 Shlomo Yona. All rights reserved.
 
-LICENSE
+This library is free software. 
+You can redistribute it and/or modify it under the same terms as Perl itself.  
 
-This library is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
 
 
 DESCRIPTION OF THIS FILE:

@@ -14,11 +14,12 @@ interface functions for constructing, searching and deleting a suffix tree, and
 to data structures for describing the tree.
 
 COPYRIGHT
-Copyright 2002-2003 Shlomo Yona
 
-LICENSE
-This library is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+Copyright (c) 2002, 2003 Shlomo Yona. All rights reserved.
+
+This library is free software. 
+You can redistribute it and/or modify it under the same terms as Perl itself.  
+
 *******************************************************************************/
 
 /* A type definition for a 32 bits variable - a double word. */
