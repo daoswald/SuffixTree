@@ -1,10 +1,8 @@
 /******************************************************************************
-Suffix Tree Version 2.1
-
 AUTHORS
 
 Dotan Tsadok
-Instructor: Mr. Shlomo Yona, University of Haifa, Israel. December 2002.
+Instructor: Shlomo Yona, University of Haifa, Israel. December 2002.
 Current maintainer: Shlomo Yona	<shlomo@cs.haifa.ac.il>
 
 COPYRIGHT
@@ -13,8 +11,6 @@ Copyright (c) 2002, 2003 Shlomo Yona. All rights reserved.
 
 This library is free software. 
 You can redistribute it and/or modify it under the same terms as Perl itself.  
-
-
 
 DESCRIPTION OF THIS FILE:
 
@@ -26,7 +22,7 @@ constructing a suffix tree over a string in time and space complexity
 O(length of the string). The code is written under strict ANSI C.
 
 For a complete understanding of the code see Ukkonen's algorithm and the
-readme.txt file.
+c-implementation_notes.txt file.
 
 The general pseudo code is:
 
@@ -47,7 +43,7 @@ ST_CreateTree:
 
 
 For implementation interpretations see Basic Ideas paragraph in the Developement
-section of the readme.txt file.
+section of the c-implementation_notes.txt file.
 
 An example of the implementations of a node and its sons using linked lists
 instead of arrays:
@@ -1105,7 +1101,7 @@ void ST_PrintTree(SUFFIX_TREE* tree)
 /*
    ST_SelfTest :
    Self test of the tree - search for all substrings of the main string. See 
-   testing paragraph in the readme.txt file.
+   testing paragraph in the c-implementation_notes.txt file.
 
    Input : The tree to test.
 

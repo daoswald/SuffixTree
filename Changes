@@ -1,5 +1,14 @@
 Revision history for Perl extension SuffixTree
 
+0.03 Tue Jan  7 18:59:37 IST 2003
+	- Removed @EXPORT_OK from globals (we have no such variable)
+	- @EXPORT inserted to globals
+	- Using strict
+	- Added a README file containing some portability related 
+		information
+	- t/use.pl renamed to t/test_use.t
+	- Declaring previous interface as deprecated (though still 
+		supported), offering a more Perllish interface instead.
 0.02 Mon Jan  6 07:55:54 IST 2003
 	- Added t/use.pl test that only tests if the module 
 		loads correctly in 'use SuffixTree'

@@ -1,17 +1,9 @@
 /******************************************************************************
-Suffix Tree Version 2.1
-by:         Dotan Tsadok.
-Instructor: Mr. Shlomo Yona.
-University of Haifa, Israel.
-December 2002.
+AUTHORS
 
-Current maintainer:
-	Shlomo Yona	<shlomo@cs.haifa.ac.il>
-
-DESCRIPTION OF THIS FILE:
-This is the decleration file suffix_tree.h and it contains declarations of the
-interface functions for constructing, searching and deleting a suffix tree, and
-to data structures for describing the tree.
+Dotan Tsadok
+Instructor: Shlomo Yona, University of Haifa, Israel. December 2002.
+Current maintainer: Shlomo Yona	<shlomo@cs.haifa.ac.il>
 
 COPYRIGHT
 
@@ -19,6 +11,11 @@ Copyright (c) 2002, 2003 Shlomo Yona. All rights reserved.
 
 This library is free software. 
 You can redistribute it and/or modify it under the same terms as Perl itself.  
+
+DESCRIPTION OF THIS FILE:
+This is the decleration file suffix_tree.h and it contains declarations of the
+interface functions for constructing, searching and deleting a suffix tree, and
+to data structures for describing the tree.
 
 *******************************************************************************/
 
@@ -147,7 +144,7 @@ void ST_DeleteTree(SUFFIX_TREE* tree);
 /*
    ST_SelfTest
    Self test of the tree - search for all substrings of the main string. See
-   testing paragraph in the readme.txt file.
+   testing paragraph in the c-implementation_notes.txt file.
 
    Input : The tree to test.
 

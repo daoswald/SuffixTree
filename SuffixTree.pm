@@ -1,19 +1,55 @@
 package SuffixTree;
+use strict;
 require Exporter;
 require DynaLoader;
-use vars qw/$VERSION @ISA @EXPORT_OK/;
-$VERSION = '0.02';
+use vars qw/$VERSION @ISA @EXPORT/;
+$VERSION = '0.03';
 @ISA = qw(Exporter DynaLoader);
 package SuffixTree;
 bootstrap SuffixTree;
 package SuffixTree;
-@EXPORT = qw(ST_CreateTree ST_PrintTree ST_FindSubstring ST_DeleteTree);
+@EXPORT = qw(ST_CreateTree ST_PrintTree ST_FindSubstring ST_DeleteTree
+		create_tree print_tree find_substring delete_tree);
+
+sub create_tree($);
+sub print_tree($);
+sub find_substring($$);
+sub delete_tree($);
+
+sub create_tree($) {
+	return ST_CreateTree($_[0], length($_[0]));
+}
+
+sub print_tree($) {
+	ST_PrintTree(shift);
+}
+
+sub find_substring($$) {
+	return ST_FindSubstring($_[0],$_[1],length($_[1]));
+}
+
+sub delete_tree($) {
+	ST_DeleteTree(shift);
+}
 
 =head1 NAME
 
 SuffixTree - Efficient string manipulation data structure interface for Perl.
 
 =head1 SYNOPSIS
+
+	use SuffixTree;
+
+	my $str = "mississippi";
+	my $tree=create_tree($str);
+	print_tree($tree);
+	my $position = find_substring($tree, "ssis");
+
+	printf("\nPosition of ssis in mississippi is %ld.\n\n", $position);
+
+	delete_tree($tree); # NOTICE: this method will soon become deprecated 
+
+=head1 DEPRECATED SYNOPSIS
 
 	use SuffixTree;
 
@@ -49,6 +85,40 @@ will definitly address in the future.
 
 =over 3
 
+=item $tree = create_tree($string)
+
+Allocates memory for the tree and starts Ukkonen's construction algorithm. 
+Parameters: A string. Returns a reference to the tree.
+
+=item $position = find_substring($tree, $substring)
+
+Searches for a string in the tree. It traverses the tree down starting
+its root like in a regular trie. Parameters: the tree to search in, a 
+substring to look for. Returns the position it was found in the source 
+string or ST_ERROR if string is not in the tree. 
+NOTE: We did not make sure how ST_ERROR 'looks like' in Perl. This should be 
+further explained in future releases.
+
+=item print_tree($tree)
+
+Prints the tree.
+Parameters: the tree to print.
+
+=item delete_tree($tree)
+
+Deletes a suffix tree.
+Parameters: the tree to delete.
+Returns   : void.
+
+=head1 DEPRECATED FUNCTIONS
+
+All functions are exported by default. Please note that all these interface 
+functions were automatically extracted from the ANSI-C header file, so they 
+might not behave as Perlish as you'd expect them to. This is something we 
+will definitly address in the future.
+
+=over 3
+
 =item $tree = ST_CreateTree($string, length($string))
 
 Allocates memory for the tree and starts Ukkonen's construction algorithm. 
@@ -74,16 +144,9 @@ Deletes a suffix tree.
 Parameters: the tree to delete.
 Returns   : void.
 
-=item ST_SelfTest($tree)
-
-Tests a suffix tree - search for all substrings of the main string (see
-Testing Guide in the README file).
-Parameters: the tree to test.
-Returns   : 1 for success, 0 for failure.
-
 =head1 BUGS
 
-This Perl interface was mostly build automatically (using SWIG). Little to no
+This Perl interface was mostly built automatically (using SWIG). Little to no
 attention was given to testing. In future relases of this Perl Module (along with
 its underlying ANSI-C implementation) we hope to fix all problems that might 
 currenly interfere with successful usage of this module. Please send bug reports
@@ -96,6 +159,10 @@ to the author(s) of this module.
 [2] Building tests for this module (for the `make test` part of the installation)
 
 [3] Object Oriented like usage
+
+=head1 PORTABILITY
+
+	Please read the README file for information.
 
 =head1 SEE ALSO
 
