@@ -2,9 +2,13 @@ Changes
 INSTALL
 Makefile.PL
 MANIFEST
+README
+META.yml
+META.json
 c-implementation_notes.txt
 suffix_tree.c
 suffix_tree.h
 SuffixTree.pm
 suffix_tree_wrap.c
-t/use.pl
+t/test_use.t
+t/test_string.t
