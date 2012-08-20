@@ -1,5 +1,9 @@
 Revision history for Perl extension SuffixTree
-
+0.04 Mon Aug 20 14:49:00 PDT 2012
+  - Applied an adaptation of the patches supplied in RT#11256 and RT#11243.
+  - find_substring() now returns 0 if substring isn't found.
+  - Documented that find_substring() is 1-based, and that 0 indicates not found.
+  - Added an adaptation of the test from RT#60010.
 0.03 Tue Jan  7 18:59:37 IST 2003
 	- Removed @EXPORT_OK from globals (we have no such variable)
 	- @EXPORT inserted to globals

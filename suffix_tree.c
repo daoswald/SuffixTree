@@ -572,10 +572,12 @@ DBL_WORD ST_FindSubstring(
       else
       {
          /* One non-matching symbols is found - W is not a substring */
-         return ST_ERROR;
+         /* RT#11243: Return 0 instead of ST_ERROR if not found. */
+         return 0; 
       }
    }
-   return ST_ERROR;
+   /* RT#11243: Return 0 instead of ST_ERROR if not found. */
+   return 0;
 }
 
 /******************************************************************************/
@@ -997,6 +999,7 @@ void ST_DeleteTree(SUFFIX_TREE* tree)
    if(tree == 0)
       return;
    ST_DeleteSubTree(tree->root);
+   if (tree->tree_string) free(tree->tree_string); /* RT#11256 */
    free(tree);
 }
 

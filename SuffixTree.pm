@@ -3,7 +3,7 @@ use strict;
 require Exporter;
 require DynaLoader;
 use vars qw/$VERSION @ISA @EXPORT/;
-$VERSION = '0.03';
+$VERSION = '0.04';
 @ISA = qw(Exporter DynaLoader);
 package SuffixTree;
 bootstrap SuffixTree;
@@ -94,10 +94,8 @@ Parameters: A string. Returns a reference to the tree.
 
 Searches for a string in the tree. It traverses the tree down starting
 its root like in a regular trie. Parameters: the tree to search in, a 
-substring to look for. Returns the position it was found in the source 
-string or ST_ERROR if string is not in the tree. 
-NOTE: We did not make sure how ST_ERROR 'looks like' in Perl. This should be 
-further explained in future releases.
+substring to look for. Returns the 1-based position it was found in the source 
+string or 0 if string is not in the tree. 
 
 =item print_tree($tree)
 
@@ -128,10 +126,8 @@ Parameters: A string, length of the string. Returns a reference to the tree.
 
 Searches for a string in the tree. It traverses the tree down starting
 its root like in a regular trie. Parameters: the tree to search in, a 
-substring to look for, length of substring. Returns the position it was 
-found in the source string or ST_ERROR if string is not in the tree. 
-NOTE: We did not make sure how ST_ERROR 'looks like' in Perl. This should be 
-further explained in future releases.
+substring to look for, length of substring. Returns the 1-based position it was 
+found in the source string or 0 if string is not in the tree. 
 
 =item ST_PrintTree($tree)
 
