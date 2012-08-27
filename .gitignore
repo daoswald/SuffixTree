@@ -6,4 +6,5 @@ blib/
 pm_to_blib
 suffix_tree.o
 suffix_tree_wrap.o
+*.gz
 
