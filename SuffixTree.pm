@@ -146,7 +146,7 @@ This Perl interface was mostly built automatically (using SWIG). Little to no
 attention was given to testing. In future relases of this Perl Module (along with
 its underlying ANSI-C implementation) we hope to fix all problems that might 
 currenly interfere with successful usage of this module. Please send bug reports
-to the author(s) of this module.
+to the current maintainer(s) of this module.
 
 =head1 FUTURE WORK
 
@@ -162,19 +162,26 @@ to the author(s) of this module.
 
 =head1 SEE ALSO
 
-	http://cs.haifa.ac.il/~shlomo/suffix_tree/
+	L<https://github.com/daoswald/SuffixTree.git> - This module's Github
+repository.
+
+	L<http://en.wikipedia.org/wiki/Suffix_tree> - Wikipedia's Suffix Tree
+explanation.
+
 
 =head1 AUTHOR
 
-Shlomo Yona E<lt>shlomo@cs.haifa.ac.ilE<gt>
+Shlomo Yona E<lt>yona@cs.technion.ac.ilE<gt> is the original author.
+
+David Oswald E<lt>davido@cpan.orgE<gt> is the current maintainer.
 
 =head1 THANKS TO
 
-Offer Kaye (http://okaye.esmartweb.com/) for useful ideas and support.
+Offer Kaye for useful ideas and support.
 
 =head1 COPYRIGHT
 
-Copyright (c) 2002, 2003 Shlomo Yona. All rights reserved.
+Copyright (c) 2002, 2003, 2012 Shlomo Yona. All rights reserved.
 
 This library is free software. 
 You can redistribute it and/or modify it under the same terms as Perl itself.  
