@@ -1,4 +1,6 @@
 #! perl
+use strict;
+use warnings;
 use Test;
 # Tests recommended in RT#60010 (adapted).
 BEGIN { plan tests => 6, todo => [6] }
@@ -19,7 +21,7 @@ ok ( ! find_substring($tree, "sss") ); # Not found: Error condition is -1.
 my $str2  = "x";
 # this will redefine ST_ERROR and confuse suffex_tree.c:
 my $tree2 = create_tree($str2);
-$query = "Missouri river";
+my $query = "Missouri river";
 ok ( ! find_substring($tree, $query) );
 
 delete_tree($tree);

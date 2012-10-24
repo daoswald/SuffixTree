@@ -12,3 +12,8 @@ SuffixTree.pm
 suffix_tree_wrap.c
 t/test_use.t
 t/test_string.t
+t/01-manifest.t
+t/02-pod.t
+t/03-pod-coverage.t
+t/04-perlcritic.t
+t/13-kwalitee.t
