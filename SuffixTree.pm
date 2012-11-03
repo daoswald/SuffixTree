@@ -9,7 +9,7 @@ require DynaLoader;
 
 use vars qw/$VERSION @ISA @EXPORT/;
 
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 @ISA = qw(Exporter DynaLoader);
 
