@@ -1,5 +1,9 @@
 Revision history for Perl extension SuffixTree
 
+0.07 2013-01-02
+  - Provided better documentation of the LICENSE (no material change, just
+    better documented).
+
 0.06 2012-11-02
   - "Changes" is now CPAN::Changes::Spec compliant.
   - Added t/09-changes.t

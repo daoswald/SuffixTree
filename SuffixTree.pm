@@ -9,7 +9,7 @@ require DynaLoader;
 
 use vars qw/$VERSION @ISA @EXPORT/;
 
-$VERSION = '0.06';
+$VERSION = '0.07';
 
 @ISA = qw(Exporter DynaLoader);
 
@@ -190,12 +190,15 @@ David Oswald E<lt>davido@cpan.orgE<gt> is the current maintainer.
 
 Offer Kaye for useful ideas and support.
 
-=head1 COPYRIGHT
+=head1 LICENSE AND COPYRIGHT
 
 Copyright (c) 2002, 2003, 2012 Shlomo Yona. All rights reserved.
 
-This library is free software. 
-You can redistribute it and/or modify it under the same terms as Perl itself.  
+This library is free software; you can redistribute it and/or modify it under
+the terms of either: the GNU General Public License as published by the Free
+Software Foundation; or the Artistic License.
+
+See L<http://dev.perl.org/licenses/> for more information.  
 
 =cut
 
